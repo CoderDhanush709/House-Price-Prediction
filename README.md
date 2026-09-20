@@ -16,7 +16,7 @@ An end-to-end Machine Learning regression project predicting median house values
 ### 2. Random Forest Feature Importance
 > Highlights which demographic, economic, and geographic features carry the highest predictive weight when forecasting home values.
 
-![Feature Importances](feature_importances(2).png)
+![Feature Importances](feature_importances.png)
 
 ---
 
