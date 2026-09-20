@@ -1,20 +1,20 @@
 # 🏡 House Price Prediction
 
-An end-to-end Machine Learning regression project predicting median house values across **20,640 California districts** using statistical modeling, exploratory data analysis (EDA), and tree-based feature importance.
+An end-to-end Machine Learning regression project predicting median house values across **20,640 California districts** using statistical modeling, exploratory data analysis (EDA), and tree-based feature importance[cite: 14].
 
 ---
 
 ## 📊 Key Visual Insights & Model Interpretability
 
 ### 1. Income vs. House Value (Core Feature Driver)
-> Demonstrates the strong positive correlation ($r = 0.688$) between local median income and district house valuation, along with the observed price cap at $500,000.
+> Demonstrates the strong positive correlation ($r = 0.688$) between local median income and district house valuation, along with the observed price cap at $500,000[cite: 14].
 
 ![Income vs House Value](scatter_income_vs_value.png)
 
 ---
 
 ### 2. Random Forest Feature Importance
-> Highlights which demographic, economic, and geographic features carry the highest predictive weight when forecasting home values.
+> Highlights which demographic, economic, and geographic features carry the highest predictive weight when forecasting home values[cite: 14].
 
 ![Feature Importances](feature_importances.png)
 
@@ -49,9 +49,18 @@ Evaluated on an 80/20 train-test split (4,128 test districts)[cite: 14]:
 
 ## 🛠️ Tech Stack & Workflow
 
+* **Python:** Core programming environment[cite: 14].
+* **Data Manipulation & Analysis:** `pandas`, `numpy`[cite: 14].
+* **Visualization:** `matplotlib`, `seaborn`[cite: 14].
+* **Machine Learning & Metrics:** `scikit-learn` (`train_test_split`, `LinearRegression`, `RandomForestRegressor`, `mean_squared_error`, `r2_score`)[cite: 14].
+
+---
+
+## 📂 Repository Structure
+
 ```text
-  Data Ingestion               EDA & Correlation               Model Training               Evaluation
-┌─────────────────────┐     ┌─────────────────────┐     ┌─────────────────────────┐     ┌────────────────┐
-│ California Housing  │ ──> │ Pandas / Seaborn    │ ──> │ Linear Regression       │ ──> │ RMSE & R²      │
-│ (20,640 records)    │     │ Scatter / Heatmaps  │     │ Random Forest Regressor │     │ Feature Imp.   │
-└─────────────────────┘     └─────────────────────┘     └─────────────────────────┘     └────────────────┘
+├── scatter_income_vs_value.png            # Income vs. House Value scatter visualization
+├── feature_importances.png                # Random Forest feature importance chart
+├── california_housing.csv                 # Cleaned dataset (20,640 rows, 9 features)
+├── MI_project.ipynb                       # Complete Jupyter Notebook with EDA & Modeling
+└── README.md                              # Detailed project documentation and findings
